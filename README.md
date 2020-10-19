@@ -12,6 +12,6 @@ This project is belt on these following tools
 
 A big shout out to the unsplash community for providing a free API in which has helped alot of developers not only me to buld projects using there API 
 
-And feel free to do what ever you want with this project 
+And as i have already said feel free to do what ever you want with this project
 
 Happy Hacking 😊
