@@ -11,6 +11,7 @@ function App() {
             <li>Home</li>
           </ul>
         </div>
+        <h1>Photo gallery</h1>
         <div className="search">
           <input type="text" placeholder="search" />
           <button>Search</button>
