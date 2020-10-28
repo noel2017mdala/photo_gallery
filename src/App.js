@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchdata, search } from "./Actions/UserAction";
 import "./Css/style.css";
 
 function App() {
+  const select = useSelector((data) => {
+    return data;
+  });
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log(dispatch(fetchdata));
+  });
   return (
     <div className="style">
       <div className="header">
-        <div>
+        <div className="list">
           <ul>
             <li>Random</li>
             <li>Home</li>
