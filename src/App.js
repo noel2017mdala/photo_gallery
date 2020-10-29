@@ -1,10 +1,20 @@
 import React, { useEffect } from "react";
 import "./Css/style.css";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchData } from "./Actions/fetchAction";
 
 function App() {
-  useEffect(() => {
-    console.log("Use Effect");
+  const select = useSelector((data) => {
+    return data;
   });
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchData());
+    console.log("render");
+  }, []);
+  console.log(select);
   return (
     <div className="style">
       <div className="header">
