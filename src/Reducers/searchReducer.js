@@ -1,4 +1,4 @@
-let initialState = [];
+let initialState;
 
 const fetchQuery = (state = initialState, action) => {
   if (action.type === "LOAD") {
