@@ -3,17 +3,18 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import rootReducer from './Store/Reducers';
 import { Provider } from "react-redux";
-import { applyMiddleware, createStore } from "redux";
-import fetchQuery from "./Reducers/searchReducer";
+import { applyMiddleware, compose, createStore } from "redux";
 import thunk from "redux-thunk";
-const middleware = [thunk];
 
-const store = createStore(fetchQuery, applyMiddleware(...middleware));
+const middleware = [thunk];
+const store = createStore(rootReducer, compose(applyMiddleware(...middleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+    <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
