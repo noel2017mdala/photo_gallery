@@ -6,7 +6,7 @@ export const createFetch = () =>{
         const response = await fetch(url);
         const resData = await response.json();
         let data = resData;
-        console.log('World');
+        
         dispatch({type: FETCH_ACTIONS, payLoad: data});  
     }
 }   

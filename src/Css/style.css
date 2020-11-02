@@ -5,7 +5,7 @@ body {
   background-image: url("../images/astronaut.jpg");
   background-size: cover;
   background-position: 0px 1550px;
-  background-attachment: initial;
+  background-attachment: fixed;
   height: 450px;
   padding-top: 5px;
 }
@@ -21,6 +21,7 @@ h1 {
 li {
   list-style: none;
   float: right;
+  display: "flext";
   padding: 7px;
   padding-left: 10px;
   background-color: brown;
@@ -44,4 +45,13 @@ button {
   color: white;
 
   border-radius: 5px;
+}
+.image-item {
+  display: inline-block;
+}
+img {
+  padding: 7px;
+  margin: 0px;
+  margin-left: 20px;
+  cursor: pointer;
 }
