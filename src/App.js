@@ -1,15 +1,27 @@
 import React from "react";
 import "./Css/style.css";
-import Nav from './Nav';
+import Nav from './Routes/Nav';
 import LoadDisplay from './LoadDisplay';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import images from './Routes/images';
+import random from './Routes/Random';
+import fetchImage from './Routes/fetchImage';
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 const App = (props) => {
     return (
       <Router>
-      <div className="style">
-        <Nav />
-        <LoadDisplay />
+        <div className="style">
+            <Nav />
+                <Route>
+                    <Switch>
+                      <Route path='/' exact component={LoadDisplay} />
+                      <Route path='/random' component={random} />
+                       <Route path='/images' exact component={images} />
+                       <Route path='/images/:id' exact component={fetchImage} />
+                   </Switch>
+        </Route>
       </div>
       </Router>
     );

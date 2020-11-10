@@ -1,8 +1,11 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {createFetch} from './Store/Actions/ActionCreator';import ClipLoader from 'react-spinners/ClipLoader';
-import {Route, Link} from 'react-router-dom';
+import {createFetch} from './Store/Actions/ActionCreator';
+import ClipLoader from 'react-spinners/ClipLoader';
+import {Link} from 'react-router-dom';
+
 const LoadDisplay = () =>{
+  
 //dispatch is used to call an action
  const dispatch = useDispatch();
     const override = `
@@ -35,9 +38,9 @@ const LoadDisplay = () =>{
           the page has  it will display the data else the page will 
           continue loading
           */
-          !select.fetch.data ? <ClipLoader css={override} size='70px' loading={true}/> : select.fetch.data.map((data, i) => (
+          !select.fetch.data ? <ClipLoader css={override} size='70px' loading={true} color='black'/> : select.fetch.data.map((data, i) => (
         <div key={data.id} className='image-item'>
-          <Link to={data.id}>
+          <Link to={`images/${data.id}`}>
           <img  src={data.urls.full} alt={data.alt_description} height='400' width='400' />
           </Link>
           </div>

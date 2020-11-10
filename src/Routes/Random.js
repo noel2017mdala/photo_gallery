@@ -3,7 +3,7 @@ import React from 'react';
 const Random = () =>{
     return(
         <div>
-            Hello World From Random
+            <p>Hello World From Random</p>
             </div>
     )
 }
