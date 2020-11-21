@@ -8,7 +8,7 @@ const Nav = () =>{
           <div className="list">
             <ul>
               <Link className='test' to='/random'>Random</Link>
-              <Link className='test'to='search'>Search</Link>
+              <Link className='test'to='/search'>Search</Link>
               <Link className='test' to='/'>Home</Link>
             </ul>
           </div>

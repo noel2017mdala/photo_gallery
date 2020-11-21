@@ -6,7 +6,7 @@ body {
   background-size: cover;
   background-position: 0px 1550px;
   background-attachment: fixed;
-  height: 450px;
+  height: 70vh;
   padding-top: 5px;
 }
 p {
@@ -49,10 +49,29 @@ button {
 }
 .image-item {
   display: inline-block;
+  padding: 10px 23px;
 }
 img {
-  padding: 7px;
-  margin: 0px;
-  margin-left: 5px;
   cursor: pointer;
+  margin-bottom: 1px;
+}
+
+.image-style {
+  height: 79vh;
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 50px;
+}
+.content p {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 20px;
+}
+.content img {
+  width: 65vh;
+  height: 80vh;
+  position: absolute;
+  left: 20px;
 }

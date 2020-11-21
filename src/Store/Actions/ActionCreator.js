@@ -26,3 +26,14 @@ export const getImage = (id) =>{
 
     }
 }
+
+export const fetchRandomImages = () =>{
+    let url = "https://api.unsplash.com/photos/random/?client_id=T-amN10-t2znoTYm0SdL86gJzSr0LrgOO_Ha1ZxdN_k";
+    return async dispatch =>{
+        const response = await fetch(url);
+        const resData = await response.json();
+        let data = resData;
+        
+        dispatch({type: FETCH_ACTIONS, payLoad: data});  
+    }
+}

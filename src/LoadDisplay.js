@@ -8,7 +8,8 @@ const LoadDisplay = () =>{
   
 //dispatch is used to call an action
  const dispatch = useDispatch();
-    const override = `
+
+const override = `
   display: block;
   margin: 0 auto;
   border-color: red;
@@ -31,7 +32,7 @@ const LoadDisplay = () =>{
   });
  
     return(
-        <div>
+        <div class='container'>
             {
           /*
           check wether the fetch api has finished prosessing the request if 
