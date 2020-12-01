@@ -1,9 +1,18 @@
 import React from 'react';
 
+
 const Search = () =>{
+
+    let typingTimer;
+    let doneTypingInterval = 2000;
+
+    let userInput = (e)  =>{
+        console.log(e.target.value)
+    }
+
     return(
         <div>
-            Hello World
+            <input type='text' name='search' placeholder='search' onChange={userInput}/>
             </div>
     )
 }

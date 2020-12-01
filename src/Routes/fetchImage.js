@@ -3,6 +3,7 @@ import ClipLoader from 'react-spinners/ClipLoader';
 import {useSelector, useDispatch} from 'react-redux';
 import {getImage} from '../Store/Actions/ActionCreator'
 import "../Css/style.css";
+import Logo from '../images/iconfinder_instagram_2142569.png'
 
 // const dispatch = useDispatch();
 
@@ -24,7 +25,7 @@ const FetchImage = (props) =>{
 
  useEffect(() =>{
      dispatch(getImage(props));
- },[])
+ },[dispatch, props])
  console.log(select);
     return(
        <div>
@@ -37,9 +38,11 @@ const FetchImage = (props) =>{
                                         <p>{select.image.imageData.alt_description}</p>
                                     <br/>
                             <div className='extra-content'>
-                 <p>User : <a href='#'>{select.image.imageData.user.name}</a></p>
+                           
+                 <a className='user_tag' href={`user/${select.image.imageData.user.id}`}>{`@${select.image.imageData.user.name}`}</a>
              <br/>
-          <p>instagram : <a href={`https://instagram.com/${select.image.imageData.user.instagram_username}`} target='_blank'>{select.image.imageData.user.instagram_username}</a></p>
+          {/* <p>instagram : <a href={`https://instagram.com/${select.image.imageData.user.instagram_username}`} target='_blank'>{select.image.imageData.user.instagram_username}</a></p> */}
+          <a href={`https://instagram.com/${select.image.imageData.user.instagram_username}`} target='_blank'><img className='instagam_logo' src={Logo} alt='instagram'/></a>
                      </div>
                         </div>
                              </div>

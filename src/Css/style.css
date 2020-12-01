@@ -69,9 +69,20 @@ img {
   text-align: right;
   padding-right: 20px;
 }
-.content img {
+.content .image-receive {
   width: 65vh;
   height: 80vh;
   position: absolute;
   left: 20px;
+}
+
+.instagam_logo{
+float: right;
+height: 40px;
+display: inline;
+}
+.user_tag{
+  display: inline;
+  float: right;
+  text-decoration: none;
 }
