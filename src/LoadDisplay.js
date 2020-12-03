@@ -32,7 +32,7 @@ const override = `
   });
  
     return(
-        <div class='container'>
+        <div className='container'>
             {
           /*
           check wether the fetch api has finished prosessing the request if 

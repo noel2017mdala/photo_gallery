@@ -1,5 +1,6 @@
 export const FETCH_ACTIONS = 'FETCH_ACTIONS';
-export const FETCH_IMAGES = 'FETCH_IMAGES'
+export const FETCH_IMAGES = 'FETCH_IMAGES';
+export const FETCH_USER = 'FETCH_USER';
 
 
 export const createFetch = () =>{
@@ -35,5 +36,17 @@ export const fetchRandomImages = () =>{
         let data = resData;
         
         dispatch({type: FETCH_ACTIONS, payLoad: data});  
+    }
+}
+
+export const getUserDetails = (username) =>{
+
+    let url = `https://api.unsplash.com/users/${username}/photos?client_id=T-amN10-t2znoTYm0SdL86gJzSr0LrgOO_Ha1ZxdN_k`;
+    return async dispatch =>{
+        const response = await fetch(url);
+        const resData = await response.json();
+        let data = resData;
+        
+        dispatch({type: FETCH_USER, payLoad: data});  
     }
 }

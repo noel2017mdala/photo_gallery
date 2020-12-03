@@ -13,6 +13,7 @@ const Search = () =>{
     return(
         <div>
             <input type='text' name='search' placeholder='search' onChange={userInput}/>
+            <button>Search</button>
             </div>
     )
 }

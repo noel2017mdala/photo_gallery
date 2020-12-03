@@ -26,7 +26,7 @@ const FetchImage = (props) =>{
  useEffect(() =>{
      dispatch(getImage(props));
  },[dispatch, props])
- console.log(select);
+//  console.log(select);
     return(
        <div>
           {
@@ -39,7 +39,7 @@ const FetchImage = (props) =>{
                                     <br/>
                             <div className='extra-content'>
                            
-                 <a className='user_tag' href={`user/${select.image.imageData.user.id}`}>{`@${select.image.imageData.user.name}`}</a>
+                 <a className='user_tag' href={`user/${select.image.imageData.user.username}`}>{`@${select.image.imageData.user.name}`}</a>
              <br/>
           {/* <p>instagram : <a href={`https://instagram.com/${select.image.imageData.user.instagram_username}`} target='_blank'>{select.image.imageData.user.instagram_username}</a></p> */}
           <a href={`https://instagram.com/${select.image.imageData.user.instagram_username}`} target='_blank'><img className='instagam_logo' src={Logo} alt='instagram'/></a>

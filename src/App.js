@@ -1,5 +1,5 @@
 import React from "react";
-import "./Css/style.css";
+// import "./Css/style.css";
 import Nav from './Routes/Nav';
 import LoadDisplay from './LoadDisplay';
 import images from './Routes/images';
