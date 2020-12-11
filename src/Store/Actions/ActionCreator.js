@@ -1,6 +1,7 @@
 export const FETCH_ACTIONS = 'FETCH_ACTIONS';
 export const FETCH_IMAGES = 'FETCH_IMAGES';
 export const FETCH_USER = 'FETCH_USER';
+export const FETCH_QUERY = 'FETCH_QUERY';
 
 
 export const createFetch = () =>{
@@ -50,3 +51,11 @@ export const getUserDetails = (username) =>{
         dispatch({type: FETCH_USER, payLoad: data});  
     }
 }
+
+// https://api.unsplash.com/search/photos?query=wanderlust █
+
+
+
+let header = {
+    Authentication: `Client-ID T-amN10-t2znoTYm0SdL86gJzSr0LrgOO_Ha1ZxdN_k`
+};

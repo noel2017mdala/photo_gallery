@@ -1,19 +1,25 @@
-import React from 'react';
-
+import React, {useEffect, useState}from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 
 const Search = () =>{
 
-    let typingTimer;
-    let doneTypingInterval = 2000;
+const dispatch = useDispatch();
+const [text, setText] = useState('');
 
     let userInput = (e)  =>{
-        console.log(e.target.value)
+        setText(e.target.value);
+        // console.log(text);
     }
-
+const select = useSelector((e) =>{
+    console.log(e);
+})
     return(
         <div>
             <input type='text' name='search' placeholder='search' onChange={userInput}/>
-            <button>Search</button>
+            <button onClick={(e) => {
+                e.preventDefault();
+                console.log(text);
+            }}>Search</button>
             </div>
     )
 }

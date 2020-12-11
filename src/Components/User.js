@@ -6,12 +6,13 @@ import {getUserDetails} from '../Store/Actions/ActionCreator';
 const User = (props) =>{
     const dispatch = useDispatch();
 
-let userStyle = {
-    display:'inline-block',
+    const override = `
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  margin-top:20px
+`;
 
-    margin:0,
-    padding:0,
-}
     const select = useSelector((data) =>{
         return data;
     })
@@ -19,7 +20,7 @@ let userStyle = {
     useEffect(() =>{
         dispatch(getUserDetails(props.match.params.id));
     }, [dispatch, props])    
-    console.log(select)
+    // console.log(select)
     return(
         <div>
              {
