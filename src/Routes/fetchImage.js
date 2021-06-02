@@ -34,8 +34,8 @@ const FetchImage = (props) =>{
             <div className='image-style'>
                     <div className='image-cover'>
                          <div className='content'>
+                         <p>{select.image.imageData.alt_description}</p>
                                 <img className='image-receive' src={select.image.imageData.urls.full} alt={select.image.imageData.alt_description}/>
-                                        <p>{select.image.imageData.alt_description}</p>
                                     <br/>
                             <div className='extra-content'>
                            
