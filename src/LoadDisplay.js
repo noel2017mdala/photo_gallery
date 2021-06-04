@@ -1,4 +1,10 @@
 import React, { useEffect } from "react";
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile,
+} from "react-device-detect";
 import { useSelector, useDispatch } from "react-redux";
 import { createFetch } from "./Store/Actions/ActionCreator";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -34,7 +40,7 @@ margin-top:20px
     <div className="container">
       {
         /*
-          check wether the fetch api has finished prosessing the request if 
+          check wether the fetch api has finished processing the request if 
           the page has  it will display the data else the page will 
           continue loading
           */
@@ -43,7 +49,7 @@ margin-top:20px
         ) : (
           select.fetch.data.map((data, i) => (
             <div key={data.id} className="image-item">
-              <Link to={`images/${data.id}`}>
+              <Link to={`imag es/${data.id}`}>
                 <img
                   src={data.urls.full}
                   alt={data.alt_description}

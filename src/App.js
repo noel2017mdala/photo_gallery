@@ -19,9 +19,9 @@ const App = (props) => {
           <Switch>
             <Route path="/" exact component={LoadDisplay} />
             {/* <Route path="/random" component={random} />
-            <Route path="/images" exact component={images} />
+            <Route path="/images" exact component={images} /> */}
             <Route path="/images/:id" exact component={fetchImage} />
-            <Route path="/search" exact component={Search} />
+            {/* <Route path="/search" exact component={Search} />
             <Route path="/images/user/:id" exact component={User} /> */}
           </Switch>
         </Route>
