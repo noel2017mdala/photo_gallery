@@ -8,9 +8,6 @@ const media = {
 };
 
 export const main = styled.div`
-  color: black;
-   
-
   .img{
     max-width: 100%;
     height: auto;
@@ -25,6 +22,7 @@ export const main = styled.div`
    width: 100%;
    height: 100%;
    object-fit: cover;
+   margin-bottom: 1em;
   }
 
   ${media.tablet}{

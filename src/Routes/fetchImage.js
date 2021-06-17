@@ -29,8 +29,6 @@ const FetchImage = (props) => {
   return (
     <div>
       <Mobile>
-        <h1>Hello World</h1>
-
         {!select.image.imageData ? (
           <ClipLoader css={override} size="70px" loading={true} color="black" />
         ) : (
@@ -56,7 +54,7 @@ const FetchImage = (props) => {
                 <a
                   className="user_tag"
                   href={`user/${select.image.imageData.user.username}`}
-                >{`@${select.image.imageData.user.name}`}</a>
+                >{` see more photos`}</a>
                 <br />
                 {/* <p>instagram : <a href={`https://instagram.com/${select.image.imageData.user.instagram_username}`} target='_blank'>{select.image.imageData.user.instagram_username}</a></p> */}
               </div>

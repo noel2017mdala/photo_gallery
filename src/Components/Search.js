@@ -22,7 +22,7 @@ const Search = () => {
           className="search"
           onClick={(e) => {
             e.preventDefault();
-            console.log(text);
+            // console.log(text);
           }}
         >
           Search

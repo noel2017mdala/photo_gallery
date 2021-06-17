@@ -27,10 +27,10 @@ const LoadDisplay = () => {
   //css override
 
   const override = `
-  // display: block;
+   display: block;
   margin: 0 auto;
-  border-color: red;
-  margin-top:20px
+  border-color: black;
+  // margin-top:20px
 `;
 
   return (

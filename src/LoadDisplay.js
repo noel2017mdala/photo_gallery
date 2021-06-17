@@ -49,7 +49,7 @@ margin-top:20px
         ) : (
           select.fetch.data.map((data, i) => (
             <div key={data.id} className="image-item">
-              <Link to={`imag es/${data.id}`}>
+              <Link to={`images/${data.id}`}>
                 <img
                   src={data.urls.full}
                   alt={data.alt_description}
