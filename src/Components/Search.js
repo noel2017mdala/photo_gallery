@@ -10,9 +10,7 @@ const Search = () => {
     setText(e.target.value);
     // console.log(text);
   };
-  const select = useSelector((e) => {
-    console.log(e);
-  });
+  const select = useSelector((e) => {});
   return (
     <div>
       <SearchBar>

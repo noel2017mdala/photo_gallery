@@ -1,10 +1,4 @@
 import React, { useEffect } from "react";
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile,
-} from "react-device-detect";
 import { useSelector, useDispatch } from "react-redux";
 import { createFetch } from "./Store/Actions/ActionCreator";
 import ClipLoader from "react-spinners/ClipLoader";
