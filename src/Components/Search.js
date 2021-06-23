@@ -10,9 +10,7 @@ const Search = () => {
     setText(e.target.value);
     // console.log(text);
   };
-  const select = useSelector((e) => {
-    console.log(e);
-  });
+  const select = useSelector((e) => {});
   return (
     <div>
       <SearchBar>
@@ -22,7 +20,7 @@ const Search = () => {
           className="search"
           onClick={(e) => {
             e.preventDefault();
-            console.log(text);
+            // console.log(text);
           }}
         >
           Search

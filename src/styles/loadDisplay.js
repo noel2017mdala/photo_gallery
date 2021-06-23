@@ -8,9 +8,6 @@ const media = {
 };
 
 export const main = styled.div`
-  color: black;
-   
-
   .img{
     max-width: 100%;
     height: auto;
@@ -25,11 +22,22 @@ export const main = styled.div`
    width: 100%;
    height: 100%;
    object-fit: cover;
+   margin-bottom: 1em;
+   display: block;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(0);
+    cursor: pointer;
+  }
+
+  .image-item img:hover {
+    transform: scale(1.04);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
   }
 
   ${media.tablet}{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(5, 300px);
     grid-auto-flow: row dense;
 

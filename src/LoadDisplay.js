@@ -34,7 +34,7 @@ margin-top:20px
     <div className="container">
       {
         /*
-          check wether the fetch api has finished prosessing the request if 
+          check wether the fetch api has finished processing the request if 
           the page has  it will display the data else the page will 
           continue loading
           */
