@@ -25,14 +25,6 @@ export const user = styled.div`
     filter: grayscale(0);
     transition: all 100ms ease-out;
   }
-  
-
-  .images-collection img:hover {
-    transform: scale(1.05);
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-  }
-
     .images-collection img{
         width: 100%;
         height: 100%;
@@ -40,6 +32,12 @@ export const user = styled.div`
         //margin-bottom: 1em;
         margin: 1em 0em;
         cursor: pointer;
+    }
+
+    .images-collection img:hover {
+      transform: scale(1.04);
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
     }
 
     ${media.tablet}{
@@ -60,6 +58,7 @@ export const user = styled.div`
     } 
 
     ${media.bigScreen}{
+      
         .container{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

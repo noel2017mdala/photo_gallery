@@ -55,7 +55,8 @@ export const main = styled.div`
 
   ${media.bigScreen}{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(5, auto-flow);
     grid-template-rows: repeat(5, auto-flow);
 
     .image-item{
