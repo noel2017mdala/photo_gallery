@@ -2,9 +2,9 @@ import React from "react";
 // import "./Css/style.css";
 import Nav from "./Routes/Nav";
 import LoadDisplay from "./Components/LoadDisplay";
-import images from "./Routes/images";
-import random from "./Routes/Random";
-import fetchImage from "./Routes/fetchImage";
+import Images from "./Routes/images";
+import Random from "./Routes/Random";
+import FetchImage from "./Routes/fetchImage";
 import Search from "./Components/Search";
 import User from "./Components/User";
 
@@ -18,9 +18,9 @@ const App = (props) => {
         <Route>
           <Switch>
             <Route path="/" exact component={LoadDisplay} />
-            {/* <Route path="/random" component={random} />
-            <Route path="/images" exact component={images} /> */}
-            <Route path="/images/:id" exact component={fetchImage} />
+            <Route path="/random" component={Random} />
+            <Route path="/images" exact component={Images} />
+            <Route path="/images/:id" exact component={FetchImage} />
             <Route path="/search" exact component={Search} />
             <Route path="/images/user/:id" exact component={User} />
           </Switch>
